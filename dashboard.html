@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechnoByteX - Mi Canal</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">TechnoByteX</div>
+        <nav>
+            <a href="#" id="channel-link">Mi Canal</a>
+            <a href="admin.html" id="admin-nav" class="hidden"><i class="fas fa-cog"></i> Administrar</a>
+        </nav>
+        <a href="index.html" class="logout-btn"><i class="fas fa-sign-out-alt"></i> Salir</a>
+    </header>
+
+    <main class="channel-view">
+        <section class="channel-header">
+            <img src="https://via.placeholder.com/100/FF0000/FFFFFF?text=TBX" alt="Logo de TechnoByteX" class="channel-logo">
+            <div class="channel-info">
+                <h2 id="welcome-title">Bienvenido a TechnoByteX</h2>
+                <div class="subscriber-count">
+                    <i class="fas fa-users"></i> Suscriptores: <span id="subs-number">Cargando...</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="video-list">
+            <h3>Últimos Vídeos Sincronizados</h3>
+            <div id="videos-container" class="grid-videos">
+                <div class="loading-message">Cargando vídeos...</div>
+            </div>
+        </section>
+    </main>
+    
+    <div id="chatbot-icon"><i class="fas fa-robot"></i></div>
+    <div id="chatbot-window" class="chatbot-hidden">
+        <div class="chatbot-header">
+            TechnoBotX <span id="close-chatbot"><i class="fas fa-times"></i></span>
+        </div>
+        <div id="chatbot-messages" class="chatbot-messages">
+            <div class="bot-message">¡Hola! Soy TechnoBotX. Pregúntame sobre tecnología o los vídeos del canal.</div>
+        </div>
+        <form id="chatbot-form">
+            <input type="text" id="chatbot-input" placeholder="Escribe tu mensaje..." required>
+            <button type="submit"><i class="fas fa-paper-plane"></i></button>
+        </form>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+  </html>
+  
