@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechnoByteX - Panel Admin</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Panel de Administración</div>
+        <nav><a href="dashboard.html"><i class="fas fa-arrow-left"></i> Volver al Canal</a></nav>
+        <a href="index.html" class="logout-btn"><i class="fas fa-sign-out-alt"></i> Salir</a>
+    </header>
+
+    <main class="admin-panel">
+        <h2 id="admin-welcome">Bienvenido, Administrador.</h2>
+        
+        <section class="admin-card">
+            <h3>Modificar Mensaje de Bienvenida</h3>
+            <p>Este mensaje aparece en la cabecera del canal.</p>
+            <textarea id="welcome-message" rows="3">¡Bienvenido a la comunidad de tecnología!</textarea>
+            <button onclick="saveSetting('welcome-message')"><i class="fas fa-save"></i> Guardar Mensaje</button>
+            <span id="msg-welcome-message" class="save-message"></span>
+        </section>
+        
+        <section class="admin-card">
+            <h3>Estado de Sincronización de YouTube</h3>
+            <p>Última sincronización de vídeos: <span id="last-sync">Cargando...</span></p>
+            <button onclick="triggerSync()"><i class="fas fa-sync-alt"></i> Sincronizar Vídeos Ahora</button>
+            <span id="msg-sync-status" class="save-message"></span>
+        </section>
+        
+    </main>
+    <script src="app.js"></script>
+</body>
+  </html>
+  
